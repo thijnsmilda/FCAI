@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="nl" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FC Artifficial Intelligence | Halveer je werkweek</title>
+    <!-- Tailwind CSS voor styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        fcblack: '#000000',
+                        fcgray: '#27272A', /* Duidelijker grijs (Tailwind zinc-800) voor diepte */
+                        fcdark: '#18181B', /* Tussenkleur (Tailwind zinc-900) */
+                        fclightgray: '#E5E5E5',
+                        fcborder: '#3F3F46' /* Duidelijkere grijze randen */
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: theme('colors.fcblack');
+            color: theme('colors.fclightgray');
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        /* Zorgt ervoor dat de kalender in de date-picker wit/zichtbaar blijft op donkere achtergrond */
+        ::-webkit-calendar-picker-indicator {
+            filter: invert(1);
+        }
+    </style>
+</head>
+<body class="bg-fcblack text-fclightgray">
+
+    <!-- Navigatie -->
+    <nav class="border-b border-fcborder bg-fcblack/90 backdrop-blur-md sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <!-- LOGO PLAATSEN: Vervang de tekst hieronder door een <img> tag als je het Canva logo hebt -->
+            <!-- Voorbeeld: <img src="jouw-logo.png" alt="FC AI Logo" class="h-10"> -->
+            <div class="font-extrabold text-xl tracking-widest text-white">
+                FC AI.
+            </div>
+            <div class="hidden md:flex gap-6 text-sm font-semibold items-center">
+                <a href="#intake" class="hover:text-white transition text-white">Start Project</a>
+                <a href="#diensten" class="hover:text-white transition">Diensten</a>
+                <a href="#familie" class="hover:text-white transition">De Familie</a>
+                <a href="#faq" class="hover:text-white transition">FAQ</a>
+            </div>
+            <a href="#contact" class="bg-white text-black px-5 py-2 rounded-full font-bold text-sm hover:bg-gray-200 transition">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Founding Member Banner -->
+    <div class="bg-gradient-to-r from-fcgray to-fcborder text-center py-3 px-4 text-sm font-medium text-white border-b border-black">
+        🔥 <span class="font-bold">Word onze eerste AI-ambassadeur!</span> De eerste 5 'Founding Members' krijgen een gratis 1-op-1 optimalisatiesessie (30 min) cadeau.
+    </div>
+
+    <!-- Hero Sectie -->
+    <section class="max-w-4xl mx-auto py-24 px-6 text-center bg-gradient-to-b from-fcgray/40 to-fcblack rounded-b-[4rem] mb-10">
+        <h1 class="text-5xl md:text-6xl font-extrabold text-white mb-6 leading-tight">
+            Geef je werkdruk uit handen aan FC AI.
+        </h1>
+        <p class="text-xl text-gray-400 mb-10 max-w-2xl mx-auto">
+            Stop met werken als een machine, laat de machine voor jou werken. Halveer je werkweek met onze AI-oplossingen voor presentaties, data en websites.
+        </p>
+        <div class="flex flex-col sm:flex-row justify-center gap-4">
+            <a href="#diensten" class="bg-gradient-to-r from-gray-200 to-white text-black px-8 py-4 rounded-full font-bold text-lg hover:from-white hover:to-gray-300 transition shadow-lg shadow-white/10">
+                Word lid van de familie
+            </a>
+            <a href="#missie" class="bg-fcgray border border-gray-500 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-fcborder transition shadow-lg shadow-black/50">
+                Ontdek onze missie
+            </a>
+        </div>
+    </section>
+
+    <!-- Missie Sectie -->
+    <section id="missie" class="py-20 px-6 bg-gradient-to-br from-fcgray to-fcdark border-t border-b border-fcborder">
+        <div class="max-w-3xl mx-auto text-center">
+            <h2 class="text-3xl font-bold text-white mb-6">Waarom FC AI?</h2>
+            <p class="text-lg text-gray-400 leading-relaxed">
+                "Ik geloof dat AI voor iedereen toegankelijk moet zijn, niet alleen voor grote bedrijven met gigantische budgetten. Mijn missie is simpel: jouw werkweek efficiënter, korter en leuker maken. Ik neem met liefde die complexe powerpoint of website van je over, zodat jij aan het einde van de dag met een voldaan gevoel (en een lege to-do lijst) je laptop kunt dichtklappen."
+            </p>
+        </div>
+    </section>
+
+    <!-- Diensten -->
+    <section id="diensten" class="py-24 px-6 bg-fcblack">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl font-bold text-white mb-4 text-center">Onze AI-Diensten</h2>
+            <p class="text-gray-400 text-center mb-16 max-w-2xl mx-auto">Transparante prijzen, heldere afspraken. Kies de oplossing die jouw werkweek gaat verkorten.</p>
+            
+            <div class="grid lg:grid-cols-3 gap-8">
+                <!-- Abonnement Card -->
+                <div class="bg-gradient-to-b from-fcgray to-fcdark border border-gray-500 p-8 rounded-2xl relative overflow-hidden group hover:border-gray-400 transition shadow-2xl shadow-white/5">
+                    <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-gray-400 to-white"></div>
+                    <h3 class="text-2xl font-bold text-white mb-2">FC AI Power-abonnement</h3>
+                    <p class="text-3xl font-extrabold text-white mb-6">€50 <span class="text-sm text-gray-400 font-normal">/ maand</span></p>
+                    <p class="text-gray-400 text-sm mb-8">De ultieme tijdsbespaarder. Voor wie elke maand structureel hulp nodig heeft.</p>
+                    <ul class="space-y-4 mb-8 text-sm text-gray-300">
+                        <li class="flex items-start gap-3">
+                            <span class="text-white mt-0.5">✓</span>
+                            <span>Tot 5 uitgebreide Powerpoints per maand (ca. 20 slides p.p.)</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-white mt-0.5">✓</span>
+                            <span>Infographics & Websites in overleg (gereduceerd familietarief)</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-white mt-0.5">✓</span>
+                            <span>Inclusief toegang tot de VIP WhatsApp-familie</span>
+                        </li>
+                    </ul>
+                    <!-- VERVANG DE LINK HIERONDER DOOR JE LEMONSQUEEZY / MOLLIE BETAALLINK -->
+                    <a href="#uitleg-abonnement" class="block w-full text-center bg-gradient-to-r from-gray-200 to-white text-black py-3 rounded-xl font-bold hover:from-white hover:to-gray-300 transition">Neem abonnement</a>
+                </div>
+
+                <!-- Training Card -->
+                <div class="bg-fcdark border border-fcborder p-8 rounded-2xl flex flex-col justify-between hover:bg-fcgray transition duration-300 shadow-xl shadow-black">
+                    <div>
+                        <h3 class="text-xl font-bold text-white mb-2">AI Training & Consultancy</h3>
+                        <p class="text-2xl font-bold text-white mb-6">€80 <span class="text-sm text-gray-400 font-normal">/ uur</span></p>
+                        <p class="text-gray-400 text-sm mb-8">Samen jouw workflow automatiseren en je AI-skills naar een hoger niveau tillen.</p>
+                        <ul class="space-y-4 mb-8 text-sm text-gray-300">
+                            <li class="flex items-start gap-3"><span class="text-white mt-0.5">✓</span><span>1-op-1 begeleiding</span></li>
+                            <li class="flex items-start gap-3"><span class="text-white mt-0.5">✓</span><span>Praktische prompts en tools</span></li>
+                            <li class="flex items-start gap-3"><span class="text-white mt-0.5">✓</span><span>Direct toepasbaar in je werk</span></li>
+                        </ul>
+                    </div>
+                    <a href="#uitleg-training" class="block w-full text-center border border-gray-500 bg-fcgray text-white py-3 rounded-xl font-bold hover:bg-fcborder transition">Plan een sessie</a>
+                </div>
+
+                <!-- Website Card -->
+                <div class="bg-fcdark border border-fcborder p-8 rounded-2xl flex flex-col justify-between hover:bg-fcgray transition duration-300 shadow-xl shadow-black">
+                    <div>
+                        <h3 class="text-xl font-bold text-white mb-2">AI-ready Websites & Meer</h3>
+                        <p class="text-2xl font-bold text-white mb-6">Vanaf €200</p>
+                        <p class="text-gray-400 text-sm mb-8">Een strakke, professionele website die staat als een huis, zonder dat jij er hoofdpijn van krijgt.</p>
+                        <ul class="space-y-4 mb-8 text-sm text-gray-300">
+                            <li class="flex items-start gap-3"><span class="text-white mt-0.5">✓</span><span>Snelle oplevering</span></li>
+                            <li class="flex items-start gap-3"><span class="text-white mt-0.5">✓</span><span>In jouw huisstijl</span></li>
+                            <li class="flex items-start gap-3"><span class="text-white mt-0.5">✓</span><span>Losse Infographics v.a. €50</span></li>
+                        </ul>
+                    </div>
+                    <a href="#uitleg-website" class="block w-full text-center border border-gray-500 bg-fcgray text-white py-3 rounded-xl font-bold hover:bg-fcborder transition">Start je aanvraag</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Diensten Uitleg Secties -->
+    <section id="uitleg-abonnement" class="py-20 px-6 bg-gradient-to-b from-fcblack to-fcdark border-t border-fcborder">
+        <div class="max-w-4xl mx-auto bg-fcgray/30 border border-gray-700 rounded-3xl p-8 md:p-12 shadow-2xl">
+            <h2 class="text-3xl font-bold text-white mb-6">Het FC AI Power-abonnement uitgelegd</h2>
+            <p class="text-gray-300 mb-6 leading-relaxed">
+                Dit abonnement is ontworpen voor ondernemers en professionals die structureel tijd willen besparen. Voor slechts <strong>€50 per maand</strong> nemen wij het zware, repeterende werk voor je uit handen.
+            </p>
+            <h4 class="text-xl font-bold text-white mb-4">Wat krijg je precies?</h4>
+            <ul class="space-y-3 text-gray-400 mb-8">
+                <li>• <strong class="text-gray-200">Tot 5 Powerpoints per maand:</strong> Wij maken tot 5 strakke, professionele presentaties voor je (maximaal 20 slides per presentatie). Jij levert de ruwe tekst, wij maken de impact.</li>
+                <li>• <strong class="text-gray-200">Voorrang en korting op maatwerk:</strong> Heb je een website of losse infographic nodig? Als abonnee krijg je voorrang in de planning en korting op het standaardtarief.</li>
+                <li>• <strong class="text-gray-200">De VIP Community:</strong> Je wordt direct toegevoegd aan onze "alleen-lezen" WhatsApp-familie waar maandelijks de beste AI-hacks worden gedeeld.</li>
+            </ul>
+            <p class="text-gray-300 mb-8">Geen verrassingen, geen kleine lettertjes. Gewoon goed werk dat jou wekelijks uren bespaart.</p>
+            <!-- Zodra je een echte betaallink hebt (zoals LemonSqueezy of Stripe), kun je die hier bij href="..." invullen in plaats van #intake -->
+            <a href="#intake" class="inline-block bg-gradient-to-r from-gray-200 to-white text-black px-8 py-3 rounded-xl font-bold hover:from-white hover:to-gray-300 transition shadow-lg shadow-white/5">Naar Intake & Abonneren</a>
+        </div>
+    </section>
+
+    <section id="uitleg-training" class="py-20 px-6 bg-fcdark border-t border-fcborder">
+        <div class="max-w-4xl mx-auto bg-fcgray/30 border border-gray-700 rounded-3xl p-8 md:p-12 shadow-2xl">
+            <h2 class="text-3xl font-bold text-white mb-6">AI Training & Consultancy uitgelegd</h2>
+            <p class="text-gray-300 mb-6 leading-relaxed">
+                Wil je zelf aan de knoppen zitten en leren hoe je AI kunt integreren in je dagelijkse werkzaamheden? Met onze 1-op-1 training (<strong>€80 per uur</strong>) brengen we jouw skills naar een hoger niveau.
+            </p>
+            <h4 class="text-xl font-bold text-white mb-4">Hoe ziet een sessie eruit?</h4>
+            <ul class="space-y-3 text-gray-400 mb-8">
+                <li>• <strong class="text-gray-200">Praktijkgericht:</strong> Geen saaie theorie, maar direct aan de slag in tools zoals ChatGPT, Midjourney of Canva AI.</li>
+                <li>• <strong class="text-gray-200">Workflow Analyse:</strong> We kijken naar jouw specifieke taken en bouwen prompts die jij dagelijks kunt hergebruiken.</li>
+                <li>• <strong class="text-gray-200">Altijd Up-to-date:</strong> We behandelen de allernieuwste tools die relevant zijn voor jouw branche.</li>
+            </ul>
+            <a href="#intake" class="inline-block border border-gray-500 bg-fcgray text-white px-8 py-3 rounded-xl font-bold hover:bg-fcborder transition">Plan je sessie in via de Intake</a>
+        </div>
+    </section>
+
+    <section id="uitleg-website" class="py-20 px-6 bg-gradient-to-b from-fcdark to-fcblack border-t border-fcborder border-b">
+        <div class="max-w-4xl mx-auto bg-fcgray/30 border border-gray-700 rounded-3xl p-8 md:p-12 shadow-2xl">
+            <h2 class="text-3xl font-bold text-white mb-6">AI-ready Websites & Losse Diensten uitgelegd</h2>
+            <p class="text-gray-300 mb-6 leading-relaxed">
+                Een digitaal visitekaartje hoeft niet weken te duren en duizenden euro's te kosten. Met behulp van AI en slimme templates bouwen we razendsnel wat jij nodig hebt.
+            </p>
+            <h4 class="text-xl font-bold text-white mb-4">Onze project-diensten:</h4>
+            <ul class="space-y-3 text-gray-400 mb-8">
+                <li>• <strong class="text-gray-200">One-Page Websites (Vanaf €200):</strong> Een complete, moderne en mobielvriendelijke website (zoals degene die je nu bekijkt). Perfect om direct klanten te werven.</li>
+                <li>• <strong class="text-gray-200">Losse Infographics (Vanaf €50):</strong> Complexe data of processen omzetten in een helder visueel overzicht, in jouw huisstijl.</li>
+                <li>• <strong class="text-gray-200">Losse Powerpoints:</strong> Geen abonnement nodig, maar wel af en toe een professionele presentatie? Vraag hem simpelweg aan.</li>
+            </ul>
+            <a href="#intake" class="inline-block border border-gray-500 bg-fcgray text-white px-8 py-3 rounded-xl font-bold hover:bg-fcborder transition">Start je project via de Intake</a>
+        </div>
+    </section>
+
+    <!-- Intake Formulier Sectie (HTML Native) -->
+    <section id="intake" class="py-24 px-6 bg-fcblack border-t border-fcborder">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl font-bold text-white mb-4 text-center">Start je Project / Intake</h2>
+            <p class="text-gray-400 text-center mb-12 max-w-2xl mx-auto">Vul het onderstaande formulier in om je wensen door te geven. Wij nemen zo snel mogelijk contact met je op of gaan direct voor je aan de slag!</p>
+            
+            <div class="w-full bg-fcdark rounded-3xl p-8 md:p-12 shadow-2xl border border-fcborder relative overflow-hidden">
+                <!-- Subtiele gradient achtergrond effectje in de hoek -->
+                <div class="absolute -top-20 -right-20 w-64 h-64 bg-gray-600 rounded-full mix-blend-multiply filter blur-[100px] opacity-20"></div>
+
+                <!-- Formulier -->
+                <!-- Tip: Je kunt de 'action' aanpassen naar een service zoals Formspree (https://formspree.io/) om deze makkelijk werkend te krijgen zonder backend code -->
+                <form action="mailto:thijnsmilda@hotmail.com" method="POST" enctype="text/plain" class="relative z-10 space-y-6">
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="naam" class="block text-sm font-semibold text-gray-300 mb-2">Naam en/of bedrijf *</label>
+                            <input type="text" id="naam" name="naam" class="w-full bg-fcgray border border-gray-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-white focus:ring-1 focus:ring-white transition" placeholder="Jouw naam" required>
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-semibold text-gray-300 mb-2">E-mailadres *</label>
+                            <input type="email" id="email" name="email" class="w-full bg-fcgray border border-gray-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-white focus:ring-1 focus:ring-white transition" placeholder="jouw@email.nl" required>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label for="dienst" class="block text-sm font-semibold text-gray-300 mb-2">Welke dienst ben je in geïnteresseerd? *</label>
+                        <select id="dienst" name="dienst" class="w-full bg-fcgray border border-gray-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-white focus:ring-1 focus:ring-white transition appearance-none" required>
+                            <option value="" disabled selected>Kies een dienst...</option>
+                            <option value="Power-abonnement">FC AI Power-abonnement</option>
+                            <option value="Powerpoint">Losse professionele Powerpoint</option>
+                            <option value="Infographic">Losse custom Infographic</option>
+                            <option value="Website">Losse AI-ready Website</option>
+                            <option value="Training">Losse AI Training & Consultancy</option>
+                            <option value="Anders">Anders, namelijk...</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="opdracht" class="block text-sm font-semibold text-gray-300 mb-2">Vertel ons over je opdracht *</label>
+                        <textarea id="opdracht" name="opdracht" rows="5" class="w-full bg-fcgray border border-gray-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-white focus:ring-1 focus:ring-white transition resize-none" placeholder="Wat zijn je wensen, doelgroep, en eventuele specifieke kleuren/stijl? Wij snappen aan een half woord genoeg." required></textarea>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="deadline" class="block text-sm font-semibold text-gray-300 mb-2">Gewenste Opleverdatum</label>
+                            <input type="date" id="deadline" name="deadline" class="w-full bg-fcgray border border-gray-700 rounded-xl px-4 py-3 text-gray-400 focus:text-white focus:outline-none focus:border-white focus:ring-1 focus:ring-white transition">
+                        </div>
+                        <div>
+                            <label for="bestanden" class="block text-sm font-semibold text-gray-300 mb-2">Link naar Bestanden / Logo (Optioneel)</label>
+                            <input type="url" id="bestanden" name="bestanden" class="w-full bg-fcgray border border-gray-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-white focus:ring-1 focus:ring-white transition" placeholder="Bijv. Google Drive of WeTransfer link">
+                        </div>
+                    </div>
+
+                    <div class="pt-4">
+                        <button type="submit" class="w-full bg-gradient-to-r from-gray-200 to-white text-black py-4 rounded-xl font-bold text-lg hover:from-white hover:to-gray-300 transition shadow-lg shadow-white/5">
+                            Verstuur Aanvraag
+                        </button>
+                    </div>
+                </form>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- Werkwijze / Spelregels -->
+    <section id="werkwijze" class="py-20 px-6 bg-gradient-to-t from-fcdark to-fcblack border-t border-b border-fcborder shadow-[inset_0_10px_30px_rgba(0,0,0,0.5)]">
+        <div class="max-w-5xl mx-auto">
+            <h2 class="text-3xl font-bold text-white mb-12 text-center">Hoe we samenwerken</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="text-center bg-fcgray/40 p-8 rounded-2xl border border-fcborder hover:bg-fcgray transition">
+                    <div class="w-16 h-16 bg-gradient-to-tr from-gray-400 to-white text-black rounded-full flex items-center justify-center text-2xl font-extrabold mx-auto mb-6 shadow-lg shadow-white/10">1</div>
+                    <h4 class="text-xl font-bold text-white mb-3">De Intake</h4>
+                    <p class="text-gray-400 text-sm leading-relaxed">Vul ons simpele Intake Formulier in. Vertel ons je wensen en upload je logo en merk-kleuren. Wij snappen aan een half woord genoeg.</p>
+                </div>
+                <div class="text-center bg-fcgray/40 p-8 rounded-2xl border border-fcborder hover:bg-fcgray transition">
+                    <div class="w-16 h-16 bg-gradient-to-tr from-gray-400 to-white text-black rounded-full flex items-center justify-center text-2xl font-extrabold mx-auto mb-6 shadow-lg shadow-white/10">2</div>
+                    <h4 class="text-xl font-bold text-white mb-3">Snelheid</h4>
+                    <p class="text-gray-400 text-sm leading-relaxed">Jij wilt door, wij ook. Stuur je een opdracht in? Dan heb je binnen 2 werkdagen de eerste versie van je presentatie of document in je mailbox.</p>
+                </div>
+                <div class="text-center bg-fcgray/40 p-8 rounded-2xl border border-fcborder hover:bg-fcgray transition">
+                    <div class="w-16 h-16 bg-gradient-to-tr from-gray-400 to-white text-black rounded-full flex items-center justify-center text-2xl font-extrabold mx-auto mb-6 shadow-lg shadow-white/10">3</div>
+                    <h4 class="text-xl font-bold text-white mb-3">Feedback</h4>
+                    <p class="text-gray-400 text-sm leading-relaxed">We streven naar perfectie. Iets aanpassen? Geen probleem. Bij elke opdracht zijn 2 feedbackrondes inbegrepen. Zo garanderen we efficiëntie.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- De Familie (WhatsApp Community) -->
+    <section id="familie" class="py-24 px-6 bg-fcblack">
+        <div class="max-w-4xl mx-auto bg-gradient-to-br from-fcgray to-fcdark border border-fcborder rounded-3xl p-10 md:p-16 text-white text-center shadow-2xl">
+            <h2 class="text-3xl md:text-4xl font-extrabold mb-6">Welkom in de AI-Familie</h2>
+            <p class="text-lg text-gray-300 mb-8 font-medium">
+                Bij FC AI ben je geen nummer, je hoort bij de club. Zodra je abonnement of dienst actief is, krijg je direct toegang tot onze exclusieve WhatsApp-familie. 
+            </p>
+            <div class="text-left bg-fcblack/60 border border-gray-700 p-6 md:p-8 rounded-xl mb-8">
+                <h4 class="font-bold text-white mb-4 text-lg">Hoe de WhatsApp-groep werkt:</h4>
+                <ul class="space-y-3 text-sm text-gray-400">
+                    <li>• <strong class="text-gray-200">Exclusieve Kennis:</strong> Iedere maand deel ik hier de nieuwste, geteste AI-tools en workflows.</li>
+                    <li>• <strong class="text-gray-200">Netwerk:</strong> Je zit in een groep met gelijkgestemde ondernemers.</li>
+                    <li>• <strong class="text-gray-200">Rust in de tent:</strong> Om spam te voorkomen is de groep 'alleen-lezen'. Heb je een briljante tool ontdekt? Stuur mij (Thijn) een DM, dan deel ik het met de hele groep!</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ & Mythbusters -->
+    <section id="faq" class="py-20 px-6 bg-gradient-to-b from-fcdark to-fcblack border-t border-fcborder">
+        <div class="max-w-3xl mx-auto">
+            <h2 class="text-3xl font-bold text-white mb-12 text-center">Veelgestelde Vragen (Myth-Busters)</h2>
+            
+            <div class="space-y-6">
+                <!-- Vraag 1 -->
+                <div class="bg-fcgray/30 border border-fcborder p-6 rounded-xl hover:bg-fcgray transition">
+                    <h4 class="text-lg font-bold text-white mb-2">Is AI niet te ingewikkeld voor mij?</h4>
+                    <p class="text-gray-400 text-sm">Integendeel! AI is bedoeld om het leven makkelijker te maken, niet moeilijker. Bij FC AI nemen we het ingewikkelde werk uit handen, zodat jij alleen de vruchten plukt van de efficiëntie.</p>
+                </div>
+                <!-- Vraag 2 -->
+                <div class="bg-fcgray/30 border border-fcborder p-6 rounded-xl hover:bg-fcgray transition">
+                    <h4 class="text-lg font-bold text-white mb-2">Ben ik mijn unieke stijl kwijt als ik AI gebruik?</h4>
+                    <p class="text-gray-400 text-sm">Absoluut niet. AI is jouw assistent, jij bent de regisseur. Via ons intake formulier geef je precies je logo en kleuren door. Wij zorgen ervoor dat alles wat we opleveren 100% aansluit bij jouw merk.</p>
+                </div>
+                <!-- Vraag 3 -->
+                <div class="bg-fcgray/30 border border-fcborder p-6 rounded-xl hover:bg-fcgray transition">
+                    <h4 class="text-lg font-bold text-white mb-2">Kan FC AI echt mijn werkweek verkorten?</h4>
+                    <p class="text-gray-400 text-sm">Ja. Wij automatiseren en versnellen de repeterende taken (zoals uren staren naar een Powerpoint of data visualiseren) waar jij je kostbare tijd aan verliest. Dat is pure tijdwinst in je agenda.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer / Contact CTA -->
+    <footer id="contact" class="py-16 text-center px-6 bg-fcblack border-t border-fcgray">
+        <h2 class="text-2xl font-bold text-white mb-6">Wil jij ook op donderdag al weekend vieren?</h2>
+        <a href="mailto:thijnsmilda@hotmail.com?subject=Vraag%20via%20FC%20AI%20Website" class="inline-block bg-gradient-to-r from-gray-200 to-white text-black px-8 py-4 rounded-full font-bold text-lg hover:from-white hover:to-gray-300 transition shadow-lg shadow-white/5 mb-12">
+            Stuur een bericht
+        </a>
+
+        <!-- Direct Contact Info Block -->
+        <div class="max-w-3xl mx-auto mb-16 bg-fcdark border border-fcborder rounded-2xl p-8 shadow-xl shadow-black">
+            <h3 class="text-xl font-bold text-white mb-2">Neem direct contact op met de oprichter</h3>
+            <p class="text-gray-400 mb-8 text-sm">Thijn Smilda staat voor je klaar om je te helpen je werkweek te halveren.</p>
+            
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-6 sm:gap-10 text-gray-300">
+                <a href="mailto:thijnsmilda@hotmail.com" class="hover:text-white transition flex items-center gap-3">
+                    <span class="text-xl">✉️</span> <span class="font-medium">thijnsmilda@hotmail.com</span>
+                </a>
+                <a href="tel:0611809121" class="hover:text-white transition flex items-center gap-3">
+                    <span class="text-xl">📞</span> <span class="font-medium">06 11 80 91 21</span>
+                </a>
+                <a href="https://instagram.com/FCAI" target="_blank" class="hover:text-white transition flex items-center gap-3">
+                    <span class="text-xl">📸</span> <span class="font-medium">@FCAI</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="border-t border-gray-800 pt-8 text-sm text-gray-600 flex flex-col md:flex-row justify-center items-center gap-4">
+            <p>&copy; 2026 FC Artifficial Intelligence.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
